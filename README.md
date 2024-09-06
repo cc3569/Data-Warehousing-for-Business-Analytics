@@ -1,1 +1,1 @@
-# Data-Warehousing-for-Business-Analytics
+# NAU BAN 545: Data Warehousing for Business Analytics
