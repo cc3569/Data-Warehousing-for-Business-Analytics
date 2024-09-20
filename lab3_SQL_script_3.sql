@@ -1,0 +1,3 @@
+SELECT States.State, Customers.CustomerName, Categories.ProductCategory, Products.ProductName, Orders.Sales, Dates.Date
+FROM Dates INNER JOIN (States INNER JOIN ((Categories INNER JOIN Products ON Categories.ProductCategoryKey = Products.ProductCategoryKey) INNER JOIN (Customers INNER JOIN Orders ON Customers.CustomerKey = Orders.CustomerKey) ON Products.ProductKey = Orders.ProductKey) ON States.StateKey = Customers.StateKey) ON Dates.DateKey = Orders.DateKey
+WHERE (((States.State)="California") AND ((Categories.ProductCategory)="Furniture") AND ((Dates.Date) Between #1/1/2018# And #12/31/2018#));
