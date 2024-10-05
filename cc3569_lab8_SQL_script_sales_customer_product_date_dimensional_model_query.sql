@@ -1,0 +1,2 @@
+SELECT [Sales Facts].Sales, [Date Dimension].[Sales Date], [Customer Dimension].CustomerName, [Customer Dimension].PostalCode, [Product Dimension].ProductName
+FROM [Product Dimension] INNER JOIN ([Customer Dimension] INNER JOIN ([Date Dimension] INNER JOIN [Sales Facts] ON [Date Dimension].DateKey = [Sales Facts].DateKey) ON [Customer Dimension].CustomerKey = [Sales Facts].CustomerKey) ON [Product Dimension].ProductKey = [Sales Facts].ProductKey;
